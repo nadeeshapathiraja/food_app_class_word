@@ -10,6 +10,12 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    final size = MediaQuery.of(context).size;
+    return Scaffold(
+      body: Container(
+        width: size.width,
+        child: Column(),
+      ),
+    );
   }
 }
