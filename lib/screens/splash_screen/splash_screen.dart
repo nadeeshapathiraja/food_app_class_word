@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/screens/splash_screen/getting_started.dart';
+import 'package:animate_do/animate_do.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -37,8 +38,11 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/images/food.png'),
-            const SizedBox(height: 8),
+            Pulse(
+              duration: const Duration(seconds: 4),
+              child: Image.asset('assets/images/food.png'),
+            ),
+            const SizedBox(height: 10),
             const Text(
               "No waiting for food",
               style: TextStyle(
