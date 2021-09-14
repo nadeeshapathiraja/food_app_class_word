@@ -1,8 +1,11 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:food_app/screens/splash_screen/getting_started.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:food_app/utils/app_colors.dart';
 import 'package:food_app/utils/constants.dart';
+import 'package:food_app/utils/util_functions.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -20,12 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(
       const Duration(seconds: 5),
       () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const GettingStarted(),
-          ),
-        );
+        utilFunction.navigateTo(context, GettingStarted());
       },
     );
   }
