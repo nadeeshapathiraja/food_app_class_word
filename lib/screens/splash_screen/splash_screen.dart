@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/screens/splash_screen/getting_started.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:food_app/utils/app_colors.dart';
+import 'package:food_app/utils/constants.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -40,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Pulse(
               duration: const Duration(seconds: 4),
-              child: Image.asset('assets/images/food.png'),
+              child: Image.asset(Constants.imageAssets('food.png')),
             ),
             const SizedBox(height: 10),
             const Text(
