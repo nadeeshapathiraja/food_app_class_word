@@ -22,13 +22,18 @@ class _LogInScreenState extends State<LogInScreen> {
           children: [
             Stack(
               children: [
-                RotatedBox(
-                  quarterTurns: 2,
-                  child: Image.asset(
-                    Constants.imageAssets('bottom.png'),
-                    width: size.width,
-                    fit: BoxFit.fitWidth,
-                  ),
+                // RotatedBox(
+                //   quarterTurns: 2,
+                //   child: Image.asset(
+                //     Constants.imageAssets('bottom.png'),
+                //     width: size.width,
+                //     fit: BoxFit.fitWidth,
+                //   ),
+                // ),
+                Image.asset(
+                  Constants.imageAssets("header.png"),
+                  width: size.width,
+                  fit: BoxFit.fitWidth,
                 ),
                 Container(
                   alignment: Alignment.center,
