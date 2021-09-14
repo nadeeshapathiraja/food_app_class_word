@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:food_app/screens/login_screen/login_screen.dart';
 import 'package:food_app/utils/app_colors.dart';
 import 'package:food_app/utils/constants.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -182,7 +183,14 @@ class BottomSection extends StatelessWidget {
                   ),
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LogInScreen(),
+                      ),
+                    );
+                  },
                   child: const Text(
                     "Skip",
                     style: TextStyle(
