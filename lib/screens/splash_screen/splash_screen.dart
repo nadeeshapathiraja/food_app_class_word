@@ -47,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
               "No waiting for food",
               style: TextStyle(
                 fontSize: 14.0,
-                color: Color(0xff838383),
+                color: greyColor,
               ),
             ),
           ],

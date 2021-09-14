@@ -1,5 +1,7 @@
 // ignore_for_file: constant_identifier_names
 
+import 'package:flutter/cupertino.dart';
+
 class Constants {
   //assets path
   static const IMAGE_PATH = 'assets/images/';

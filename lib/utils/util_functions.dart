@@ -13,4 +13,8 @@ class utilFunction {
   static void goBack(BuildContext context) {
     Navigator.of(context).pop();
   }
+
+  static void screenSize(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
+  }
 }
