@@ -151,6 +151,64 @@ class _LogInScreenState extends State<LogInScreen> {
                             suffixIcon: Icon(Icons.visibility_outlined),
                           ),
                         ),
+                        SizedBox(height: 21),
+                        // ElevatedButton(
+                        //   onPressed: () {},
+
+                        //   child: Container(
+                        //     color: primaryColor,
+                        //     width: 300.0,
+                        //     height: 60.0,
+                        //     alignment: Alignment.center,
+                        //     child: Text("Sign In"),
+                        //   ),
+                        // ),
+                        InkWell(
+                          onTap: () {},
+                          child: Container(
+                            height: 60,
+                            width: 400,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              color: Colors.amber[400],
+                            ),
+                            child: Center(
+                              child: Text(
+                                "Sign In",
+                                style: TextStyle(
+                                  color: fontColor,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 17.0,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8.0,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Don’t have an account? ",
+                              style: TextStyle(
+                                fontSize: 15.0,
+                                color: greyColor,
+                              ),
+                            ),
+                            InkWell(
+                              onTap: () {},
+                              child: Text(
+                                "Register",
+                                style: TextStyle(
+                                  fontSize: 15.0,
+                                  color: fontColor,
+                                ),
+                              ),
+                            )
+                          ],
+                        )
                       ],
                     ),
                   ),
