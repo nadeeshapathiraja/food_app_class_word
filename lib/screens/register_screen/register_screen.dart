@@ -1,20 +1,20 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:food_app/screens/register_screen/register_screen.dart';
+import 'package:food_app/screens/login_screen/login_screen.dart';
 import 'package:food_app/screens/splash_screen/getting_started.dart';
 import 'package:food_app/utils/constants.dart';
 import 'package:food_app/utils/app_colors.dart';
 import 'package:food_app/utils/util_functions.dart';
 
-class LogInScreen extends StatefulWidget {
-  const LogInScreen({Key? key}) : super(key: key);
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({Key? key}) : super(key: key);
 
   @override
-  _LogInScreenState createState() => _LogInScreenState();
+  _RegisterScreenState createState() => _RegisterScreenState();
 }
 
-class _LogInScreenState extends State<LogInScreen> {
+class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -41,7 +41,7 @@ class _LogInScreenState extends State<LogInScreen> {
                           children: [
                             const SizedBox(height: 59.0),
                             const Text(
-                              "Login",
+                              "SignIn",
                               style: TextStyle(
                                 color: fontColor,
                                 fontWeight: FontWeight.w600,
@@ -49,7 +49,7 @@ class _LogInScreenState extends State<LogInScreen> {
                               ),
                             ),
                             const Text(
-                              "Access Account",
+                              "Create Your Account",
                               style: TextStyle(
                                 color: fontColor,
                                 fontWeight: FontWeight.w400,
@@ -67,36 +67,6 @@ class _LogInScreenState extends State<LogInScreen> {
             Container(
               child: Column(
                 children: [
-                  Positioned(
-                    top: 189.0,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        InkWell(
-                          onTap: () {},
-                          child: Image.asset(
-                            Constants.imageAssets("google.png"),
-                          ),
-                        ),
-                        SizedBox(width: 15.0),
-                        InkWell(
-                          onTap: () {},
-                          child: Image.asset(
-                            Constants.imageAssets("fb.png"),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 8.0),
-                  Text(
-                    "or Login with Email",
-                    style: TextStyle(
-                      fontSize: 15.0,
-                      fontWeight: FontWeight.w400,
-                      color: greyColor,
-                    ),
-                  ),
                   SizedBox(height: 25.0),
                   Padding(
                     padding: const EdgeInsets.only(left: 30.0, right: 30.0),
@@ -108,6 +78,31 @@ class _LogInScreenState extends State<LogInScreen> {
                           children: [
                             Text(
                               "Email",
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.w500,
+                                color: fontColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 6.0),
+                        TextField(
+                          decoration: InputDecoration(
+                            fillColor: kwhite,
+                            filled: true,
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 14.0),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          // ignore: prefer_const_literals_to_create_immutables
+                          children: [
+                            Text(
+                              "Phone number",
                               style: TextStyle(
                                 fontSize: 16.0,
                                 fontWeight: FontWeight.w500,
@@ -153,17 +148,6 @@ class _LogInScreenState extends State<LogInScreen> {
                           ),
                         ),
                         SizedBox(height: 21),
-                        // ElevatedButton(
-                        //   onPressed: () {},
-
-                        //   child: Container(
-                        //     color: primaryColor,
-                        //     width: 300.0,
-                        //     height: 60.0,
-                        //     alignment: Alignment.center,
-                        //     child: Text("Sign In"),
-                        //   ),
-                        // ),
                         InkWell(
                           onTap: () {},
                           child: Container(
@@ -175,7 +159,7 @@ class _LogInScreenState extends State<LogInScreen> {
                             ),
                             child: Center(
                               child: Text(
-                                "Sign In",
+                                "Sign Up",
                                 style: TextStyle(
                                   color: fontColor,
                                   fontWeight: FontWeight.w600,
@@ -192,7 +176,7 @@ class _LogInScreenState extends State<LogInScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "Don’t have an account? ",
+                              "Already have an account? ",
                               style: TextStyle(
                                 fontSize: 15.0,
                                 color: greyColor,
@@ -200,13 +184,10 @@ class _LogInScreenState extends State<LogInScreen> {
                             ),
                             InkWell(
                               onTap: () {
-                                utilFunction.navigateTo(
-                                  context,
-                                  RegisterScreen(),
-                                );
+                                utilFunction.navigateTo(context, LogInScreen());
                               },
                               child: Text(
-                                "Register",
+                                "SignIn",
                                 style: TextStyle(
                                   fontSize: 15.0,
                                   color: fontColor,
